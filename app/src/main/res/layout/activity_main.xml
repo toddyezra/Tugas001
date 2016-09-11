@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -12,17 +17,19 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Perpustakaan Sekolah"
         android:id="@+id/textView2"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:layout_weight="1" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Pengembalian Buku bulan Juni"
         android:id="@+id/textView"
-        android:layout_below="@+id/textView2" />
+        android:layout_below="@+id/textView2"
+        android:layout_weight="1" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -33,42 +40,58 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_alignWithParentIfMissing="false"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_weight="1" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Nama"
         android:id="@+id/textViewNama"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_weight="1" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editTextNama" />
+        android:layout_height="0dp"
+        android:id="@+id/editTextNama"
+        android:layout_weight="1" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Kelas"
-        android:id="@+id/textView3" />
+        android:id="@+id/textView3"
+        android:layout_weight="1" />
 
-    <EditText
+        <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText" />
+        android:layout_height="0dp"
+        android:id="@+id/editTextKelas"
+        android:layout_weight="1" />
 
-    <RadioGroup
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/jurusan"
+            android:id="@+id/spinnerJurusan"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"/>
+
+
+        <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sebelum Tanggal 20"
-        android:id="@+id/radioButton" />
+        android:id="@+id/radioButton"
+        android:checked="false" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -79,28 +102,40 @@
 
     <CheckBox
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Buku IPA"
         android:id="@+id/checkBoxIpa"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_weight="1" />
 
     <CheckBox
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Buku MTK"
         android:id="@+id/checkBoxMtk"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_weight="1" />
 
     <CheckBox
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Buku Kamus"
         android:id="@+id/checkBoxKamus"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_weight="1" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Check"
-        android:id="@+id/buttonOK" />
-</LinearLayout>
+        android:id="@+id/buttonOK"
+        android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:text="Hasil"
+            android:id="@+id/textViewHasil"
+            android:layout_weight="1" />
+    </LinearLayout>
+</ScrollView>
